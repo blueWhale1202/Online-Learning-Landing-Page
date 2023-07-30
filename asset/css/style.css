@@ -6,7 +6,106 @@ html {
     font-size: 62.5%;
 }
 
+html,
 body {
+    scroll-behavior: smooth;
+}
+
+body {
+    --primary-color: #1ebfc1;
+    --white: #fff;
+
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+}
+
+/* ================== Common ================== */
+a {
+    text-decoration: none;
+}
+
+.main-content {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    color: var(--white);
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 14px;
+    background: var(--primary-color);
+    padding: 12px 24px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* ================== Header ================== */
+.header {
+    padding-top: 40px;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: -40px;
+    z-index: 999;
+}
+.header .body {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
+.header .nav {
+    margin-left: auto;
+}
+
+.header .nav ul {
+    display: flex;
+}
+
+.header-link {
+    display: inline-block;
+    color: #2f3a3b;
+    padding: 12px 20px;
+}
+
+.header-link::before {
+    content: attr(data-text);
+    display: block;
+    font-weight: 600;
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.header-link:hover {
+    font-weight: 600;
+}
+
+.header .actions {
+    margin-left: 157px;
+}
+
+.header .action-link {
+    color: #494949;
+    margin-right: 24px;
+}
+
+.header .action-btn {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid var(--primary-color);
+    min-width: 108px;
+    line-height: 48px;
+}
+
+.header .action-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
 }
